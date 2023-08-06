@@ -1,0 +1,267 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://code.jquery.com/jquery-3.7.0.js" integrity="sha256-JlqSTELeR4TLqP0OG9dxM7yDPqX1ox/HfgiSLBj8+kM=" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="css/style.css">
+    <title>Curso SQL Basico</title>
+</head>
+<body>
+    <div class="principal">
+        <div class="titulo">
+            <p class="sub-titulo" onclick="temaUno();">
+                Definicion de una base de datos.
+            </p>
+            <p class="sub-titulo" onclick="tema2();">
+                Definición de SQL server.
+            </p>
+            <p class="sub-titulo" onclick="tema3();">
+                Que son los datos y manejo de los mismos.
+            </p>
+            <p class="sub-titulo" onclick="tema4();">
+                Definición de T-SQL.
+            </p>
+            <p class="sub-titulo" onclick="tema5();">
+
+                Tipos de sentencias T-SQL para el manejo de datos.
+            </p>
+            <section class="tema5" id="tema5" style="display: none;">
+                <p class="cierra" onclick="cerrar();">x</p>
+                <p class="tema5-1" id="tema5-1" onclick="tema5_1();">DDL (lenguaje de definicion de datos)</p>
+                <p class="tema5-2" id="tema5-2" onclick="tema5_2();">DML (lenguaje de manipualcion de datos)</p>
+            </section>
+        </div>
+        <div class="contenido">
+
+                <div class="sub-contenido" id="sub-contenido" style="display: none;">
+                    <p id="parrafo" class="parrafo">
+                    <strong> Relacionales y no relacionales (NoSQL)</strong>                        
+                        <br> <br>
+                        <strong> Relacionales:</strong> <br>                            
+                        Conjunto de datos que estan organizados y almacenados de manera sistematica en 
+                        un conjunto de tablas descritas y bien organizadas para un uso posterior de los datos.
+                        <br><br>
+                        <strong>  NoSQL:</strong><br>
+                        Conjunto de datos que pueden ser consultados y analizados desde diferentes fuentes de datos
+                        que no necesariamente utilizan el lenguaje SQL para realizar una consulta sobre los datos.  
+                        <br>
+                        <br>
+                        <button type="submit" id="decir" class="boton1"> <img src="image/bocina.png" alt="x" class="img1"></button>
+                        
+                    
+                    </p>
+
+                </div> 
+                <div class="sub-contenido" id="sub-contenido1" style="display: none;">
+                    <p id="parrafo1" class="parrafo">
+                        <strong>Definición de SQL server</strong><br><br>
+                        Gestor de base de datos creado por Microsoft corporation para el almacenamiento modificacion
+                         y extraccion de la informacion de la base de datos.
+                        <br><br>
+                        El lenguaje utilizado para el manejo de datos es Transact-SQL o T-SQL en su abreviada para la escritura de
+                        sentencias que utiliza el gestor.
+                        <br>
+                        <button type="submit" id="decir1" class="boton1"> <img src="image/bocina.png" alt="x" class="img1"></button>
+                        
+                    </p>
+                </div>
+            
+                <div class="sub-contenido" id="sub-contenido2" style="display: none;">
+                    <p id="parrafo2" class="parrafo">
+                        <strong>Que son los datos:</strong><br>
+                        Es la unidad minima de información la cual es representada por medio de letras, numeros
+                        simbolos, imagenes y otras formas de datos.
+                        <br><br>
+                        <strong>Analisis de datos:</strong><br>
+                        Proceso de estudio que consiste en limpiar, inspeccionar y transformar los datos de manera
+                        que puedan convertirse en informacion util.
+                        <br><br>
+                        <strong>Manejo de datos:</strong> <br>
+                        <br>
+                        Sirve para analizar la información que tenemos a mano, la cual nos guiara a tomar mejores
+                        decisiones, sacar mejores concluciones acerca de diversos tópicos que son cubiertos con los
+                        datos que tenemos almacenados en nuestra base de datos.
+                        <br><br>
+                        
+                        1. Sacar mejores conclusiones           <br>
+                        2. Realizar mejores tomas de decisiones <br>
+                        3. Generar mejores reportes             <br>
+                        4. Generar mejores consultas            <br>
+                        5. Tener más opciones a la mano          <br>
+                        
+                        <br>
+                        <button type="submit" id="decir2" class="boton1"> 
+                            <img src="image/bocina.png" alt="x" class="img1">
+                        </button>
+                        
+                    </p>
+                </div>
+                <div class="sub-contenido" id="sub-contenido3" style="display: none">
+                    <p id="parrafo3" class="parrafo">
+                        <strong>Definición de T-SQL</strong>
+                        <br><br>
+                        Es un lenguaje de programación de base de datos relacionales que sirve para crear objetos en base de datos
+                        y manejar datos, T-SQL es una extensión del estándar SQL para trabajar con base de datos. 
+                        Es un lenguaje procedural utilizado para programar stored procedures y tiggers en base de datos.
+
+                        <br><br>                        
+                            1. Consultas   <br>
+                            2. Edición     <br>
+                            3. Inserción   <br>
+                            4. Eliminación <br>                        
+                    </p>
+                    <br>
+                        <button type="submit" id="decir3" class="boton1"> 
+                            <img src="image/bocina.png" alt="x" class="img1">
+                        </button>                                      
+                </div>
+
+                <div class="sub-contenido" id="sub-contenido4" style="display: none;" >
+                   
+                        <strong> DDL (lenguaje de definicion de datos):</strong><br>
+                        Ayuda a cambiar la estructura de una base de datos.
+                        <br>
+                     
+                        <section class="item1" id="item1"><p class="item1-1"> Sentencia CREATE </p> <p class="mas1" id="mas1" onclick="item1();">+</p><br>
+                            <div  class="item1-1-1" id="item1_1_1" style="display: none ;">
+                                <pre style="margin-left:-290px ; padding-top: 20px; ">
+                                    Sentencia utilizada para crear una base de datos.
+                                    <code>
+                                        CREATE DATABASE Nombre_DB;
+                                    </code>
+                                </pre>
+                            
+                            </div>
+                        </section>
+                        <section class="item2" id="item2"><p class="item2-1">Creación de una tabla.</p> <p class="mas2" id="mas2" onclick="item2();">+</p><br>
+                            <div class="item2-1-1" id="item2_1_1" style="display: none;">
+                                <pre style="margin-left:-290px ; padding-top: 20px; ">
+                                    Ejemplo de creación de una tabla.
+                                    <code>
+                                        CREATE TABLE Nombre_Tabla (
+                                            codigo INTERGER,
+                                            Nombre VARCHAR(100),
+                                            Apellido VARCHAR(100)
+                                            );
+                                    </code>
+                                </pre>
+                            </div>
+                        </section>
+                        <section class="item3" id="item3"><p class="item3-1">Sentencia ALTER</p> <p class="mas3" id="mas3" onclick="item3();">+</p><br>
+                            <div class="item3-1-1" id="item3_1_1" style="display: none;">
+                                <pre style="margin-left:-290px ; padding-top: 20px; ">
+                                    Sentencia utilizada para modificar una base de datos.
+                                    
+                                    -> En este ejemplo se agrega una columna.
+                                    <code>
+                                        ALTER TABLE Nombre_Tabla ADD codigo INT;
+                                    </code>
+                                </pre>
+                            </div>
+                        </section>
+                        <section class="item4" id="item4"><p class="item4-1">Sentencia DROP</p> <p class="mas4" id="mas4" onclick="item4();">+</p><br>
+                            <div class="item4-1-1" id="item4_1_1" style="display: none;">
+                                <pre style="margin-left:-290px ; padding-top: 20px; ">
+                                    Sentencia utilizada para eliminar una columna de
+                                    una base de datos.
+                                    <code>
+                                       DROP TABLE Nombre_Tabla;
+                                    </code>
+                                </pre>
+                            </div>
+                        </section>
+                        <section class="item5" id="item5"><p class="item5-1">Sentencia TRUNCATE</p> <p class="mas5" id="mas5" onclick="item5();">+</p><br>
+                            <div class="item5-1-1" id="item5_1_1" style="display: none;">
+                                <pre style="margin-left:-290px ; padding-top: 20px; ">
+                                    Se utiliza para eliminar todos los registros 
+                                    de una tabla sin afectar su esquema y estructura
+                                    <code>
+                                        TRUNCATE TABLE table_name;
+                                    </code>
+                                </pre>
+                            </div>
+                        </section>
+                                       
+                </div>
+                <div class="sub-contenido" id="sub-contenido5" style="display: none;">
+                  
+                    <strong> DML (lenguaje de manipulacion de datos):</strong><br>
+                    Son un subconjunto de SQL que se utiliza para insetar, actualizar y eliminar datos de una base de datos.
+                    <br>
+                 
+                    <section class="item6" id="item6"><p class="item6-1"> Sentencia SELECT </p> <p class="mas6" id="mas6" onclick="item6();">+</p><br>
+                        <div  class="item6-1-1" id="item6_1_1" style="display: none ;">
+                            <pre style="margin-left:-230px ; padding-top: 25px; ">
+                                Se utiliza para recuperar datos de una o
+                                varias tablas de la base de datos. 
+                                Seleccionar todos los datos de la tabla <strong>customers</strong>
+                                <code>
+                                    SELECT * FROM customers;
+                                </code>
+                            </pre>
+                        
+                        </div>
+                    </section>
+                    <section class="item7" id="item7"><p class="item7-1">Sentencia INSERT</p> <p class="mas7" id="mas7" onclick="item7();">+</p><br>
+                        <div class="item7-1-1" id="item7_1_1" style="display: none;">
+                            <pre style="margin-left:-230px ; padding-top: 20px; ">
+                                Se utiliza para insertar nuevos registros en 
+                                una tabla de la base de datos. 
+                                Insertar un nuevo registro en la tabla <strong>customers</strong>
+                                <code>
+                                   INSERT INTO customers
+                                    (id, name, email) 
+                                    VALUES (1, 'John Smith', 'john@example.com');
+                                </code>
+                            </pre>
+                        </div>
+                    </section>
+                    <section class="item8" id="item8"><p class="item8-1">Sentencia UPDATE</p> <p class="mas8" id="mas8" onclick="item8();">+</p><br>
+                        <div class="item8-1-1" id="item8_1_1" style="display: none;">
+                            <pre style="margin-left:-240px ; padding-top: 20px; ">
+                                Se utiliza para modificar los datos ya 
+                                existentes en una base de datos.
+
+                                Actualizar el correo electronico
+                                del cliente con ID 1.
+                                <code>
+                                    UPDATE customers 
+                                    SET email = 'john.smith@example.com' 
+                                    WHERE id = 1;
+
+                                </code>
+                            </pre>
+                        </div>
+                    </section>
+                    <section class="item9" id="item9"><p class="item9-1">Sentencia DELETE</p> <p class="mas9" id="mas9" onclick="item9();">+</p><br>
+                        <div class="item9-1-1" id="item9_1_1" style="display: none;">
+                            <pre style="margin-left:-230px ; padding-top: 20px; ">
+                                Se utiliza para eliminar registros de una
+                                tabla de la base de datos.
+                                Eliminar el registro del cliente con el ID 1.
+                                <code>
+                                   DELETE FROM customers WHERE id=1;
+                                </code>
+                            </pre>
+                        </div>
+                    </section>
+
+                
+                </div>
+
+            
+
+            
+            
+
+
+        </div>
+    </div>
+    
+
+<script src="main.js"></script>
+
+</body>
+</html>
